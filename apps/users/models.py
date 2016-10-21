@@ -87,7 +87,10 @@ class UserManager(models.Manager):
                 # Make a mutable copy of the QueryDict
                 data = dict(postData.iteritems())
                 # Split the name
-                data['first_name'], data['last_name'] = data['name'].split(' ')
+                if len(data['name'].split(' ')) == 2:
+                    data['first_name'], data['last_name'] = data['name'].split(' ')
+                elif len(data['name'].split(' ')) == 1:
+                    data['first_name'] = data['name']
                 # Change it back to a QueryDict (Retain polymorphic features)
                 import urllib
                 postData = QueryDict(urllib.urlencode(data, doseq=True))
