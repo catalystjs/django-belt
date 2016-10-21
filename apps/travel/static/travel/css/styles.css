@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    margin: 1%;
+}
+
+.navbar h2 {
+    width: 30%;
+    display: inline-block;
+}
+
+.navbar .links {
+    width: 11%;
+    float: right;
+    clear: all;
+    margin-top: 3%;
+    margin-right: 5%;
+}
+
+.navbar .links a {
+    margin: 0% 5%;
+}
+
+.travel_index .my-trips-table {
+    border-collapse: collapse;
+    width: 60%;
+    border: 2px solid black;
+}
+
+.travel_index .my-trips-table tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+
+.travel_index .my-trips-table th {
+    padding: 2% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.travel_index .my-trips-table td {
+    padding: 2% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.travel_index .my-trips-table .destination {
+    width: 150px;
+}
+
+.travel_index .my-trips-table .travel-start {
+    width: 400px;
+}
+
+.travel_index .my-trips-table .travel-end {
+    width: 400px;
+}
+
+.travel_index .my-trips-table .plan {
+    width: 600px;
+}
+
+.travel_index .my-trips-table th {
+    text-align: left;
+}
+
+.travel_index .other-trip-schedules-box {
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+.travel_index .others-trips-table {
+    border-collapse: collapse;
+    width: 75%;
+    border: 2px solid black;
+}
+
+.travel_index .others-trips-table tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+
+.travel_index .others-trips-table th {
+    padding: 2% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.travel_index .others-trips-table td {
+    padding: 2% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.travel_index .others-trips-table .name {
+    width: 150px;
+}
+
+.travel_index .others-trips-table .destination {
+    width: 200px;
+}
+
+.travel_index .others-trips-table .travel-start {
+    width: 300px;
+}
+
+.travel_index .others-trips-table .travel-end {
+    width: 300px;
+}
+
+.travel_index .others-trips-table .join {
+    width: 300px;
+}
+
+.travel_index .others-trips-table th {
+    text-align: left;
+}
+
+.travel_index .add_travel_link {
+    float: right;
+    clear: all;
+    margin-right: 2%;
+    margin-top: 5%;
+}
+
+.add_travel_page .add-trip-form {
+    width: 40%;
+    display: inline-block;
+}
+
+.add_travel_page .add-trip-form input[type='text'],
+.add_travel_page .add-trip-form input[type='date'] {
+    float: right;
+    clear: all;
+    width: 45%;
+}
+
+.add_travel_page .add-trip-form input[type='submit'] {
+    float: right;
+    clear: all;
+    position: relative;
+    left: 50px;
+    box-shadow: 3px 3px 3px black;
+}
+
+.add_travel_page .errorbox {
+    width: 40%;
+    display: inline-block;
+}
+
+.add_travel_page .errorbox .error {
+    color: red;
+    vertical-align: top;
+}
+
+.destination_page .destination-details-box {
+    margin-left: 3%;
+}
+
+.destination_page .destination-box {
+    margin-left: 2%;
+}
+
+.destination_page .other-users-trips-box {
+    margin-left: 3%;
+    margin-top: 10%;
+}
+
+.destination_page .other-users-box {
+    margin-left: 5%;
+}

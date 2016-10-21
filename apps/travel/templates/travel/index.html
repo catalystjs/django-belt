@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Travel Dashboard</title>
+    {% load staticfiles %}
+    <!-- The line above tells Django to be ready to listen for static files for stylesheets -->
+    <link rel="stylesheet" href="{% static 'travel/css/styles.css' %}" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div id="container" class="travel_index">
+      <!--Include the shared navbar-->
+      {% include "travel/navbar.html" %}
+      <div class="trip-schedules-box">
+        <h4>Your Trip Schedules</h4>
+        <table class="my-trips-table">
+            <tr>
+                <th class="destination">Destination</th>
+                <th class="travel-start">Travel Start Date</th>
+                <th class="travel-end">Travel End Date</th>
+                <th class="plan">Plan</th>
+            </tr>
+            {% for trip in trips %}
+            <tr>
+                <td><a href="{% url 'travel:destination' id=trip.id %}">{{ trip.destination }}</a></td>
+                <td>{{ trip.travel_from }}</td>
+                <td>{{ trip.travel_to }}</td>
+                <td>{{ trip.description }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+      </div>
+      <div class="other-trip-schedules-box">
+        <h4>Other Users's Travel Plans</h4>
+        <table class="others-trips-table">
+            <tr>
+                <th class="name">Name</th>
+                <th class="destination">Destination</th>
+                <th class="travel-start">Travel Start Date</th>
+                <th class="travel-end">Travel End Date</th>
+                <th class="join">Do You Want to Join?</th>
+            </tr>
+            {% for trip in other_user_trips %}
+            <tr>
+                <td>{{ trip.planned_by.name }}</td>
+                <td><a href="{% url 'travel:destination' id=trip.id %}">{{ trip.destination }}</a></td>
+                <td>{{ trip.travel_from }}</td>
+                <td>{{ trip.travel_to }}</td>
+                <td><a class="join_link" href="{% url 'travel:travel_join' id=trip.id %}">Join</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+      </div>
+      <p><a class="add_travel_link" href="{% url 'travel:travel_add' %}">Add Travel Plan</a></p>
+    </div>
+  </body>
+</html>

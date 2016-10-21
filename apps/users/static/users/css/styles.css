@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+.users_index {
+    margin: 2%;
+    width: 100%;
+}
+
+.users_index h2 {
+    margin-bottom: 5%;
+}
+
+.users_index .register-box {
+    width: 35%;
+    margin-left: .5%;
+    display: inline-block;
+    font-size: initial;
+    border: 2px solid black;
+    vertical-align: top;
+}
+
+.users_index .login-box {
+    width: 35%;
+    display: inline-block;
+    font-size: initial;
+    border: 2px solid black;
+    vertical-align: top;
+}
+
+.users_index h3 {
+    position: relative;
+    bottom: 15px;
+    left: 10px;
+    background-color: white;
+    margin: 0%;
+}
+
+.users_index .register-header {
+    width: 21%;
+    padding: 0% 1%;
+}
+
+.users_index .login-header {
+    width: 16%;
+    padding: 0% 1%;
+}
+
+.users_index form {
+    padding: 3% 1%;
+    overflow: hidden;
+}
+
+.users_index input {
+    float: right;
+    clear: all;
+    border: 1px solid black;
+}
+
+.users_index input[type='submit'] {
+    box-shadow: 3px 3px 3px black;
+    background-color: white;
+}
+
+.users_index .small-text {
+    font-size: .9em;
+}
+
+.users_index .error-box {
+    margin-left: 2%;
+}
+
+.users_index .error-box .error {
+    color: red;
+}

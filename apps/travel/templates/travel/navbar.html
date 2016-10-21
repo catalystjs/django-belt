@@ -1,0 +1,12 @@
+<!--This is the template for the navbar which we will use in all pages -->
+<div class="navbar">
+  <h2>Hello {{ request.session.alias }}!</h2>
+  <div class="links">
+    <!--Only show the add book link when not on page-->
+    {% url 'travel:index' as travel_index_url %}
+    {% if request.path != travel_index_url %}
+      <a href="{% url 'travel:index' %}">Home</a>
+    {% endif %}
+    <a href="{% url 'users:logout' %}">Logout</a>
+  </div>
+</div>
